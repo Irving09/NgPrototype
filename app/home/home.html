@@ -1,0 +1,16 @@
+<div class='container'>
+	<div class='row holder'>
+		<div ng-repeat='user in home.users' ng-mouseenter='home.getUserFollowersById(user.owner.login, $index)' ng-mouseleave="home.showFollowers=false" class='user col-xs-6 col-sm-1 col-lg-1'>
+			<img src='{{user.owner.avatar_url}}'
+				 alt='{{user.owner.login}}'
+				 class='img-responsive img-circle'>
+			<a href='{{user.owner.avatar_url}}'><h5 class='login-id'>@{{user.owner.login}}</h5></a>
+			<div ng-show='home.showFollowers && home.hoveredIndex === $index' class='row followers'>
+				<h5>{{home.hoveredUser}}</h5>
+				<div ng-repeat='follower in home.followers'>
+					<blockquote class='follower'>{{follower}}</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

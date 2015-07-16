@@ -1,0 +1,54 @@
+<!-- 
+
+​- Use Ember or AngularJS for your Single Page Application Framework. (DONE)
+
+- Use Bootstrap or Zurb Foundation for your scaffolding/css. (DONE)
+
+- For any "owners" that have a name starting with the letter 'a' or 'A', make it so when I mouse over their "avatar_url" I'm show a list of their followers. (TODO)
+
+​- Try and fit a large quantity of images on the page above the fold vs. the full original size of the actual source "avatar_url". (TODO)
+
+- You should not need a server for any of this.​ (DONE)
+
+- You should not need any OAuth or security credentials for this, if you get limited by their API and receive errors when getting images that is fine. (DONE)
+
+- Email milesm@uw.edu with any files/links that I may need to view your source code, run and build your application (my GitHub username is nogbit, you do not need to use GitHub for this) (TODO)
+
+- If this is not complete by end of day May 17th I will have to cancel your phone interview, sorry. (TODO)
+
+ -->
+
+
+<!-- **************************************************************** 
+      - Create a web page that RENDERS THE IMAGE FROM THE "avatar_url" FOR EACH "owner" 
+
+      - https://api.github.com/repositories?since=1000
+    **************************************************************** -->
+
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>UW Application</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+  
+  <div ng-view></div>
+
+  <script src="bower_components/lodash/lodash.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script type='text/javascript' src="app.js"></script>
+  <script type='text/javascript' src="user/UserModule.js"></script>
+  <script type='text/javascript' src="user/UserService.js"></script>
+  <script type='text/javascript' src="home/HomeModule.js"></script>
+  <script type='text/javascript' src="home/HomeController.js"></script>
+</body>
+</html>
